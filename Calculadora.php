@@ -1,11 +1,11 @@
 <?php
 
-class Calculadora{
+  class Calculadora{
     //Atributos
-    private $total;
+    protected $total;
 
     //Métodos Especiais
-    function __construct($total=0){
+    public function __construct($total=0){
         $this->total=$total;
   }
   
@@ -20,29 +20,27 @@ class Calculadora{
   }
 
     //Metodos
-    function add($num){
+   public function add($num){
         $this->setTotal($this->getTotal()+$num);
     }
 
-    function sub($num){
+   public function sub($num){
         $this->setTotal($this->getTotal()-$num);
     }
 
-    function multiply($num){
+   public function multiply($num){
         $this->setTotal($this->getTotal()*$num);
     }
 
-    function divide($num){
+   public function divide($num){
         $this->setTotal($this->getTotal()/$num);
     }
 
-    function clear(){
+   public function clear(){
         $this->setTotal(0);
     }
 
-    function total(){
+   public function total(){
         return $this-> getTotal();
-    }
-
-    
+    }    
 }
